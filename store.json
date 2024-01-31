@@ -1,7 +1,5 @@
 [
-    {"text": [5,5,"Bahnschrift 20","fonts/bahnschrift20",1]},
-    {"box": [10,30,20,20,1]},
-    {"box": [35,30,20,20,2]},
+    {"text": [5,5,"Eggs","fonts/bahnschrift20",1]},
     {"triangle": [60,30,60,50,80,40,1]},
     {"text": [5,80,"Plain text glasstown_nbp_tf","glasstown_nbp_tf",1]},
     {"text": [5,95,"Plain text 7x14_tf","7x14_tf",2]},
