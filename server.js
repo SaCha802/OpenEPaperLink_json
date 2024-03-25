@@ -80,5 +80,5 @@ app.get('/generate-json', async (req, res) =>  {
 });
 
 app.listen(port, () => {
-  console.log(`server started on port ${PORT}`);
+  console.log(`server started on port ${port}`);
 });
