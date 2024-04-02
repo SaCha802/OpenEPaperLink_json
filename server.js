@@ -9,7 +9,7 @@ async function sendRequest(sku, token) {
     const response = await axios.post(
       'https://connect.squareup.com/v2/catalog/search-catalog-items',
       {
-        'text_filter': ,
+        'text_filter':sku,
         "limit": 1,
       },
       {
