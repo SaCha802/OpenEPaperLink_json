@@ -4,7 +4,7 @@ const fs = require('fs');
 const app = express();
 const port = process.env.PORT || 3030;
 
-async function sendRequest(, token) {
+async function sendRequest(sku, token) {
   try {
     const response = await axios.post(
       'https://connect.squareup.com/v2/catalog/search-catalog-items',
