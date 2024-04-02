@@ -4,12 +4,12 @@ const fs = require('fs');
 const app = express();
 const port = process.env.PORT || 3030;
 
-async function sendRequest(sku, token) {
+async function sendRequest(, token) {
   try {
     const response = await axios.post(
       'https://connect.squareup.com/v2/catalog/search-catalog-items',
       {
-        'text_filter': sku,
+        'text_filter': ,
         "limit": 1,
       },
       {
@@ -28,7 +28,7 @@ async function sendRequest(sku, token) {
           var product_var = variations.item_variation_data.name;
           var price = variations.item_variation_data.price_money.amount;
           price /= 100;
-          var sku = variations.item_variation_data.sku;
+          var  = variations.item_variation_data.sku;
           return [product_name, product_var, price, sku];
         }
       }
@@ -43,10 +43,10 @@ async function sendRequest(sku, token) {
 }
 
 app.get('/generate-json', async (req, res) =>  {
-  const { sku, token } = req.query;
+  const { sku, token, id } = req.query;
 
   // Check if parameters are provided
-  if (!sku || !token) {
+  if (!sku || !token || !id) {
     return res.status(400).json({ error: 'Parameters are missing' });
   }
 
@@ -62,7 +62,7 @@ app.get('/generate-json', async (req, res) =>  {
       {"text": [5, 35, p_var, "fonts/bahnschrift30", 1]},
       {"text": [160, 40, p_price, "fonts/calibrib80", 2]},
       {"text": [192, 130, p_sku, "fonts/libre36", 1,1]},
-      
+      {"text": [5, 145, id, "fonts/calibrib16", 1,1]},
     ];
     // Convert object to JSON string
     let jsonString = JSON.stringify(jsonData, null, 2);
