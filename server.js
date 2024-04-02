@@ -57,10 +57,11 @@ app.get('/generate-json', async (req, res) =>  {
     let p_price = "$"+ String(product_data[2]);
     let p_sku = product_data[3];
     let jsonData = [
-      {"text": [5, 5, p_name, "fonts/bahnschrift20", 1]},
+      { "box": [0, 0, 168, 30, 1] },
+      {"text": [5, 5, p_name, "fonts/bahnschrift20", 0]},
       {"text": [5, 35, p_var, "fonts/bahnschrift30", 1]},
       {"text": [160, 40, p_price, "fonts/calibrib80", 2]},
-      {"text": [20, 130, p_sku, "fonts/libre36", 1]},
+      {"text": [30, 130, p_sku, "fonts/libre36", 1,1]},
       
     ];
     // Convert object to JSON string
