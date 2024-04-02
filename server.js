@@ -28,7 +28,7 @@ async function sendRequest(sku, token) {
           var product_var = variations.item_variation_data.name;
           var price = variations.item_variation_data.price_money.amount;
           price /= 100;
-          var  = variations.item_variation_data.sku;
+          var sku  = variations.item_variation_data.sku;
           return [product_name, product_var, price, sku];
         }
       }
